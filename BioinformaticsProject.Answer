@@ -1,0 +1,1 @@
+cat hsp70gene_*.fasta >> hspgenes.txt | ~/Private/Biocomputing2022/tools/muscle -in hspgenes.txt -out results.test | ~/Private/Biocomputing2022/tools/hmmbuild hmm.hsp results.test
