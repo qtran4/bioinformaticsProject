@@ -1,1 +1,8 @@
-cat hsp70gene_*.fasta >> hspgenes.txt | ~/Private/Biocomputing2022/tools/muscle -in hspgenes.txt -out results.test | ~/Private/Biocomputing2022/tools/hmmbuild hmm.hsp results.test
+#Creating the hmmsearch for the hspgenes
+cat hsp70gene_*.fasta >> hspgenes.txt | ~/Private/Biocomputing2022/tools/muscle -in hspgenes.txt -out results.test | ~/Private/Biocomputing2022/tools/hmmbuild hmm.hsp results.test | cp hmm.hsp ../proteomes | ~/Private/Biocomputing2022/tools/hmmsearch --tblout hmm.hspsearch hmm.hsp proteome_01.fasta
+
+#For Loop
+for file in proteome_*.fasta
+do
+	~Private/Biocomputing2022/tools/hmmsearch --tblout hmm.hspsearch${file} hmm.hsp $file
+done
