@@ -9,3 +9,11 @@ touch ref_sequences/hsp70master.fasta
 for index in {01..22}
 	do cat ref_sequences/hsp70gene_$index.fasta >> ref_sequences/hsp70master.fasta
 done
+
+#aligning reference files
+~/Private/biocomputing2022/tools/muscle -in ref_sequences/mcrAmaster.fasta -out ref_sequences/mcrAmaster.aligned
+~/Private/biocomputing2022/tools/muscle -in ref_sequences/hsp70master.fasta -out ref_sequences/hsp70master.aligned
+
+
+
+
