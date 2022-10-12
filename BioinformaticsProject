@@ -1,0 +1,62 @@
+# Script prepared by Isaiah Murrell-Thomas and Bethany Oceguera 
+# Here, you have to assume that the script is in the bioinformaticsProject directory
+# Here, you have to assume that your muscle and hmmer tools are in ~/Private/Bioinformatics2022/tools directory 
+# Stuart Question: Should we use absolute path for everything or assume everyone has the same directory set up?
+
+# CODE START
+
+# Create one file that appends all McrA gene files 
+for A in ./ref_sequences/mcrA*.fasta
+do
+cat $A >> allspecies.fasta
+done
+
+# Using the msucle tool,, align the allspecies.fasts file to evaluate the level of sequence conservation or homology amongst sequences
+# $1 Could be the path to the muscle tool
+~/Private/Biocomputing2022/tools/muscle -in allspecies.fasta -out allspecies.fasta.aligned
+
+# Build a profile HMM using the allspecies.fasta sequence alignment and hmmbuild
+# $2 could be a path to the hmmbuild
+~/Private/Biocomputing2022/tools/hmmbuild allspecies.fasta.hmmbuild allspecies.fasta.aligned
+
+# Search the proteome for McrA gene using hmmsearch
+# $3 could be path to the hmmsearch
+# $4 could be path to proteomes
+for B in ~/Private/Biocomputing2022/bioinformaticsProject/proteomes/proteom*.fasta
+do
+~/Private/Biocomputing2022/tools/hmmsearch --tblout $B.hmmsearch.mcrA allspecies.fasta.hmmbuild $B
+done
+# Create one file that appends all hsp gene files
+for D in ./ref_sequences/hsp70gene_*.fasta
+do
+cat $D >> allgenes.fasta
+done
+
+# Using muscle, align to evaluate the level of sequence conservation or homology amongst sequences
+~/Private/Biocomputing2022/tools/muscle -in allgenes.fasta -out allgenes.fasta.aligned
+
+# # Build a profile HMM using the allspecies.fasta sequence alignment and hmmbuild
+~/Private/Biocomputing2022/tools/hmmbuild allgenes.fasta.hmmbuild allgenes.fasta.aligned
+
+# Search the proteome for hsp gene using hmmsearch
+for E in ./proteomes/proteom*.fasta
+do
+~/Private/Biocomputing2022/tools/hmmsearch --tblout $E.hmmsearch.hsp allgenes.fasta.hmmbuild $E
+done
+
+#Creating a table listing the proteomes #, if it is a methanogen (0=no, 1=yes), and how many hsp that proteome has. This table is sent to standard out
+echo "Preteome mcrA HSP70" > SummaryTable
+
+for F in ./proteomes/proteom*.fasta
+do
+proteome=$(echo $F | sed -E 's/[^0-9]//g')
+mcrA=$(cat $F.hmmsearch.mcrA | grep -v -E "^#" | wc -l)
+HSP70=$(cat $F.hmmsearch.hsp | grep -v -E "^#" | wc -l)
+echo $proteome $mcrA $HSP70 >> SummaryTable
+done
+
+cat SummaryTable
+
+#Create file of candidate pH-resistant methanogens
+echo "Eligible pH-resistant Candidates" > candidates
+cat SummaryTable | grep -v -w "0" | cut -d " " -f 1 | sed -E "s/^/Proteome /g" | tail -n +2 >> candidates
