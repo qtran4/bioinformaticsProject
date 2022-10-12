@@ -5,16 +5,16 @@
 # pH-resistant methanogen candidate proteomes
 # Usage: bash Proteome_analyzer.sh mcrA_gene_refsequences_directory hsp70_gene_refsequences_directory proteome_sequences_directory
 
-ls "$1" | grep "mcrAgene" | cat | ~/Private/Biocomputing2022/tools/muscle -out mcrA_align.fasta
+cat $1/mcrAgene_*.fasta | ~/Private/Biocomputing2022/tools/muscle -out mcrA_align.fasta
 ~/Private/Biocomputing2022/tools/hmmbuild mcrA_HMM mcrA_align.fasta
 
-ls "$1" | grep "hsp70gene" | cat | ~/Private/Biocomputing2022/tools/muscle -out hsp70_align.fasta
+cat $1/hsp70gene_*.fasta | ~/Private/Biocomputing2022/tools/muscle -out hsp70_align.fasta
 ~/Private/Biocomputing2022/tools/hmmbuild hsp70_HMM hsp70_align.fasta
 
-file=$(ls "$2")
+file=$(ls "$2" | wc -l)
 
-for proteome in $file
+for proteome in {1..$file}
 do
-~/Private/Biocomputing2022/tools/hmmsearch --tblout mcrA_seqmatch mcrA_HMM $proteome
+~/Private/Biocomputing2022/tools/hmmsearch --tblout mcrA_seqmatch mcrA_HMM ($2/proteome_ [0]*$proteome.fasta)
 ~/Private/Biocomputing2022/tools/hmmsearch --tblout hsp70_seqmatch hsp70_HMM $proteome
 done
