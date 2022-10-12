@@ -15,11 +15,24 @@
 #done
 
 #grep to find if the proteome has the mcrA gene
-for file in proteomes/*_mcrA.out
-do
-echo $file
-grep -v "#" $file | uniq | wc -l
+proteome=$(
+	for file in proteomes/*.fasta
+	do
+	echo $file
+	done)
+mcrA=$(
+	for file in proteomes/*_mcrA.out
+	do
+	grep -v "#" $file | uniq | wc -l)
+	done)
+hsp70=$(
+	for file in proteomes/*_hsp.out
+	do
+	grep -v "#" $file | uniq | wc -l)
+	done)
+echo "$proteome, $mcrA, $hsp70" >> results.txt
 done
+
 
 # cat all HSP reference sequences into master file
 #cat ~/Private/Biocomputing2022/bioinformaticsProject/ref_sequences/hsp70gene*.fasta >> ~/Private/Biocomputing2022/bioinformaticsProject/ref_sequences/hsp70_master.fasta
@@ -38,8 +51,8 @@ done
 #done
 
 #grep to find how many hsp70 genes there are
-for file in proteomes/*_hsp.out
-do
-echo $file
-grep -v "#" $file | uniq | wc -l
-done
+#for file in proteomes/*_hsp.out
+#do
+#echo $file
+#grep -v "#" $file | uniq | wc -l
+#done
