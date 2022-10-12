@@ -4,3 +4,8 @@ touch  ref_sequences/mcrAmaster.fasta
 for index in {01..18}
 	do cat ref_sequences/mcrAgene_$index.fasta >> ref_sequences/mcrAmaster.fasta
 done
+
+touch ref_sequences/hsp70master.fasta
+for index in {01..22}
+	do cat ref_sequences/hsp70gene_$index.fasta >> ref_sequences/hsp70master.fasta
+done
