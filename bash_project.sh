@@ -30,6 +30,7 @@
 #~/Private/Biocomputing2022/tools/hmmsearch --tblout $file_hsp.out hmmbuild_results_hsp.hmm $file
 #done
 
+#create a file with the full table of results:
 #grep to find if the proteome has the mcrA gene and find number of hsp70 genes
 echo "proteome, number of mcrA genes, number of hsp70 genes" > full_table.txt
 for file in proteomes/proteome_*.fasta
@@ -37,5 +38,8 @@ do
 proteome=$(echo $file)
 mcrA=$(cat $file*_mcrA.out | grep -v "#" | uniq | wc -l)
 hsp70=$(cat $file*_hsp.out | grep -v "#" | uniq | wc -l)
-echo "$proteome, $mcrA, $hsp70" >> full_table.txt
+echo "$proteome, $mcrA, $hsp70" | sed 's/proteomes\///g' >> full_table.txt
 done
+
+#sort table to better interpret results
+cat full_table.txt | tail -n 50 | sed 's/proteomes\///g' | grep -v "0," | sort -t , -k 3,3n | tail -n 8 > recommended_proteomes.txt
