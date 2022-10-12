@@ -11,10 +11,12 @@ cat $1/mcrAgene_*.fasta | ~/Private/Biocomputing2022/tools/muscle -out mcrA_alig
 cat $1/hsp70gene_*.fasta | ~/Private/Biocomputing2022/tools/muscle -out hsp70_align.fasta
 ~/Private/Biocomputing2022/tools/hmmbuild hsp70_HMM hsp70_align.fasta
 
-file=$(ls "$2" | wc -l)
+#file=$(ls "$2" | wc -l)
 
-for proteome in {1..$file}
+for proteome in $2/proteome_*.fasta
 do
-~/Private/Biocomputing2022/tools/hmmsearch --tblout mcrA_seqmatch mcrA_HMM ($2/proteome_ [0]*$proteome.fasta)
-~/Private/Biocomputing2022/tools/hmmsearch --tblout hsp70_seqmatch hsp70_HMM $proteome
+number=$(ls $proteome | grep -o "[0-9][0-9]")
+echo $number
+~/Private/Biocomputing2022/tools/hmmsearch --tblout mcrA_seqmatch$number mcrA_HMM $proteome
+~/Private/Biocomputing2022/tools/hmmsearch --tblout hsp70_seqmatch$number hsp70_HMM $proteome
 done
