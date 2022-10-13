@@ -1,0 +1,18 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+NP_951095.1          -          hsp70master          -           7.3e-285  943.7  20.1  4.7e-282  934.4  20.1   2.0   1   1   0   1   1   1   1 molecular chaperone DnaK 
+NP_953138.1          -          hsp70master          -            2.2e-12   43.7   3.5     5e-12   42.5   3.5   1.9   1   1   0   1   1   1   1 rod shape-determining protein MreB 
+NP_951790.1          -          hsp70master          -            8.6e-07   25.2   0.3   1.3e-06   24.6   0.3   1.2   1   0   0   1   1   1   1 rod shape-determining protein MreB 
+NP_951094.1          -          hsp70master          -              0.011   11.7   0.9     0.013   11.3   0.9   1.1   1   0   0   1   1   1   0 heat shock protein GrpE 
+NP_951605.1          -          hsp70master          -                0.7    5.7  10.3         1    5.1  10.3   1.2   1   0   0   1   1   1   0 DNA mismatch repair ATPase MutS-2 
+#
+# Program:         hmmsearch
+# Version:         3.3.2 (Nov 2020)
+# Pipeline mode:   SEARCH
+# Query file:      ref_sequences/hsp70master.build
+# Target file:     proteomes/proteome_21.fasta
+# Option settings: /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/tools/hmmsearch --tblout proteomes/proteome21.hsp70search ref_sequences/hsp70master.build proteomes/proteome_21.fasta 
+# Current dir:     /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/bioinformaticsProject
+# Date:            Wed Oct 12 20:14:40 2022
+# [ok]
