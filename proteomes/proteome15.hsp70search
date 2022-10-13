@@ -1,7 +1,7 @@
 #                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
 # target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
 #------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
-WP_011971911.1       -          hsp70master          -           2.6e-103  343.0   8.1  6.6e-103  341.6   8.1   1.6   1   1   0   1   1   1   1 2-alkenal reductase 
+WP_011971911.1       -          hsp70master          -           2.7e-103  342.9   8.1  6.9e-103  341.6   8.1   1.5   1   1   0   1   1   1   1 2-alkenal reductase 
 #
 # Program:         hmmsearch
 # Version:         3.3.2 (Nov 2020)
@@ -10,5 +10,5 @@ WP_011971911.1       -          hsp70master          -           2.6e-103  343.0
 # Target file:     proteomes/proteome_15.fasta
 # Option settings: /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/tools/hmmsearch --tblout proteomes/proteome15.hsp70search ref_sequences/hsp70master.build proteomes/proteome_15.fasta 
 # Current dir:     /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/bioinformaticsProject
-# Date:            Wed Oct 12 20:49:38 2022
+# Date:            Wed Oct 12 21:06:56 2022
 # [ok]

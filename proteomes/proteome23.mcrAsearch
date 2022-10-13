@@ -1,8 +1,8 @@
 #                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
 # target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
 #------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
-WP_011954235.1       -          mcrAmaster           -                  0 1056.1   2.1         0 1055.9   2.1   1.0   1   0   0   1   1   1   1 MULTISPECIES: coenzyme-B sulfoethylthiotransferase subunit alpha 
-WP_011954158.1       -          mcrAmaster           -                  0 1017.3   0.6         0 1017.2   0.6   1.0   1   0   0   1   1   1   1 MULTISPECIES: coenzyme-B sulfoethylthiotransferase subunit alpha 
+WP_011954235.1       -          mcrAmaster           -                  0 1055.4   2.1         0 1055.3   2.1   1.0   1   0   0   1   1   1   1 MULTISPECIES: coenzyme-B sulfoethylthiotransferase subunit alpha 
+WP_011954158.1       -          mcrAmaster           -                  0 1016.7   0.6         0 1016.6   0.6   1.0   1   0   0   1   1   1   1 MULTISPECIES: coenzyme-B sulfoethylthiotransferase subunit alpha 
 #
 # Program:         hmmsearch
 # Version:         3.3.2 (Nov 2020)
@@ -11,5 +11,5 @@ WP_011954158.1       -          mcrAmaster           -                  0 1017.3
 # Target file:     proteomes/proteome_23.fasta
 # Option settings: /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/tools/hmmsearch --tblout proteomes/proteome23.mcrAsearch ref_sequences/mcrAmaster.build proteomes/proteome_23.fasta 
 # Current dir:     /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/bioinformaticsProject
-# Date:            Wed Oct 12 20:49:36 2022
+# Date:            Wed Oct 12 21:06:54 2022
 # [ok]

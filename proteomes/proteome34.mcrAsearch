@@ -9,5 +9,5 @@
 # Target file:     proteomes/proteome_34.fasta
 # Option settings: /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/tools/hmmsearch --tblout proteomes/proteome34.mcrAsearch ref_sequences/mcrAmaster.build proteomes/proteome_34.fasta 
 # Current dir:     /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/bioinformaticsProject
-# Date:            Wed Oct 12 20:49:37 2022
+# Date:            Wed Oct 12 21:06:55 2022
 # [ok]

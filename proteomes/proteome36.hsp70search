@@ -1,9 +1,9 @@
 #                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
 # target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
 #------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
-WP_001062605.1       -          hsp70master          -           1.7e-263  873.3  32.7  3.8e-233  773.0  27.8   2.0   1   1   1   2   2   2   2 MULTISPECIES: molecular chaperone DnaK 
-WP_001196574.1       -          hsp70master          -           7.7e-154  511.1   8.4  2.9e-153  509.2   8.4   1.7   1   1   0   1   1   1   1 MULTISPECIES: Fe-S protein assembly chaperone HscA 
-WP_000601379.1       -          hsp70master          -            4.9e-13   46.0   2.2   3.7e-12   43.1   2.2   2.3   1   1   0   1   1   1   1 MULTISPECIES: rod shape-determining protein 
+WP_001062605.1       -          hsp70master          -           2.3e-263  872.8  32.7  4.9e-233  772.7  27.8   2.0   1   1   1   2   2   2   2 MULTISPECIES: molecular chaperone DnaK 
+WP_001196574.1       -          hsp70master          -           8.8e-154  510.9   8.4  3.4e-153  509.0   8.4   1.7   1   1   0   1   1   1   1 MULTISPECIES: Fe-S protein assembly chaperone HscA 
+WP_000601379.1       -          hsp70master          -            4.5e-13   46.1   2.1   3.3e-12   43.2   2.1   2.3   1   1   0   1   1   1   1 MULTISPECIES: rod shape-determining protein 
 #
 # Program:         hmmsearch
 # Version:         3.3.2 (Nov 2020)
@@ -12,5 +12,5 @@ WP_000601379.1       -          hsp70master          -            4.9e-13   46.0
 # Target file:     proteomes/proteome_36.fasta
 # Option settings: /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/tools/hmmsearch --tblout proteomes/proteome36.hsp70search ref_sequences/hsp70master.build proteomes/proteome_36.fasta 
 # Current dir:     /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/bioinformaticsProject
-# Date:            Wed Oct 12 20:49:39 2022
+# Date:            Wed Oct 12 21:06:57 2022
 # [ok]

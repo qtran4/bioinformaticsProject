@@ -1,8 +1,8 @@
 #                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
 # target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
 #------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
-WP_011954292.1       -          hsp70master          -           1.4e-301  997.9  30.6  1.6e-301  997.7  30.6   1.0   1   0   0   1   1   1   1 molecular chaperone DnaK 
-WP_004032955.1       -          hsp70master          -            6.1e-16   54.4  10.5   1.9e-15   52.8  10.5   1.7   1   1   0   1   1   1   1 MULTISPECIES: rod shape-determining protein 
+WP_011954292.1       -          hsp70master          -           1.9e-301  997.4  30.6  2.2e-301  997.2  30.6   1.0   1   0   0   1   1   1   1 molecular chaperone DnaK 
+WP_004032955.1       -          hsp70master          -            5.9e-16   54.5  10.4   1.8e-15   52.8  10.5   1.7   1   1   0   1   1   1   1 MULTISPECIES: rod shape-determining protein 
 #
 # Program:         hmmsearch
 # Version:         3.3.2 (Nov 2020)
@@ -11,5 +11,5 @@ WP_004032955.1       -          hsp70master          -            6.1e-16   54.4
 # Target file:     proteomes/proteome_23.fasta
 # Option settings: /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/tools/hmmsearch --tblout proteomes/proteome23.hsp70search ref_sequences/hsp70master.build proteomes/proteome_23.fasta 
 # Current dir:     /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/bioinformaticsProject
-# Date:            Wed Oct 12 20:49:38 2022
+# Date:            Wed Oct 12 21:06:56 2022
 # [ok]

@@ -10,5 +10,5 @@ WP_010867429.1       -          hsp70master          -             0.0068   11.4
 # Target file:     proteomes/proteome_46.fasta
 # Option settings: /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/tools/hmmsearch --tblout proteomes/proteome46.hsp70search ref_sequences/hsp70master.build proteomes/proteome_46.fasta 
 # Current dir:     /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/bioinformaticsProject
-# Date:            Wed Oct 12 20:49:39 2022
+# Date:            Wed Oct 12 21:06:57 2022
 # [ok]
