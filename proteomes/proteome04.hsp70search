@@ -1,10 +1,10 @@
 #                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
 # target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
 #------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
-WP_055360419.1       -          hsp70master          -           7.2e-262  867.4  31.2  1.6e-232  770.5  25.5   2.0   1   1   1   2   2   2   2 molecular chaperone DnaK 
-WP_055360541.1       -          hsp70master          -           1.3e-156  519.8  14.2  1.1e-143  477.1  13.0   2.0   2   0   0   2   2   2   2 Fe-S protein assembly chaperone HscA 
-WP_055359523.1       -          hsp70master          -            2.4e-14   49.9   0.5   1.8e-13   47.0   0.0   2.3   3   0   0   3   3   3   1 MULTISPECIES: rod shape-determining protein 
-WP_055361642.1       -          hsp70master          -              5e-06   22.4   3.1    0.0083   11.7   0.1   3.1   2   2   1   3   3   3   2 cell division protein FtsA 
+WP_055360419.1       -          hsp70master          -             5e-262  868.0  31.1  1.2e-232  770.9  25.5   2.0   1   1   1   2   2   2   2 molecular chaperone DnaK 
+WP_055360541.1       -          hsp70master          -           6.7e-157  520.7  14.3  5.7e-144  478.0  13.0   2.0   2   0   0   2   2   2   2 Fe-S protein assembly chaperone HscA 
+WP_055359523.1       -          hsp70master          -            2.3e-14   49.9   0.5   1.7e-13   47.0   0.0   2.3   3   0   0   3   3   3   1 MULTISPECIES: rod shape-determining protein 
+WP_055361642.1       -          hsp70master          -            7.3e-06   21.8   3.4    0.0095   11.5   0.1   3.1   3   1   1   4   4   4   2 cell division protein FtsA 
 #
 # Program:         hmmsearch
 # Version:         3.3.2 (Nov 2020)
@@ -13,5 +13,5 @@ WP_055361642.1       -          hsp70master          -              5e-06   22.4
 # Target file:     proteomes/proteome_04.fasta
 # Option settings: /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/tools/hmmsearch --tblout proteomes/proteome04.hsp70search ref_sequences/hsp70master.build proteomes/proteome_04.fasta 
 # Current dir:     /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/bioinformaticsProject
-# Date:            Wed Oct 12 20:14:39 2022
+# Date:            Wed Oct 12 20:49:37 2022
 # [ok]
