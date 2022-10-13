@@ -18,9 +18,9 @@ cat ./ref_sequences/mcrAgene*.fasta >> ./ref_sequences/mcrA_master.fasta
 
 #Use hmm search to search each proteome for matches to mcrA
 #the output files for hmm search are created in the proteomes directory
-for file in proteomes/proteome_*.fasta
+for file in proteomes/*
 do
-../tools/hmmsearch --tblout $file_mcrA.out hmmbuild_results_mcrA.hmm $file
+../tools/hmmsearch --tblout $file-mcrA.out hmmbuild_results_mcrA.hmm $file
 done
 
 #second, the same process is repeated for hsp70 genes
@@ -35,9 +35,9 @@ cat ./ref_sequences/hsp70gene*.fasta >> ./ref_sequences/hsp70_master.fasta
 
 #Use hmm search to search each proteome for matches to hsp70
 #this creates result files in the proteomes directory
-for file in proteomes/*.fasta
+for file in proteomes/*
 do
-../tools/hmmsearch --tblout $file_hsp.out hmmbuild_results_hsp.hmm $file
+../tools/hmmsearch --tblout $file-hsp.out hmmbuild_results_hsp.hmm $file
 done
 
 #Third, a table with all results (proteome, number of mcrA genes present, and number of hsp70 genes present) is created. This accomplished goal #1
@@ -46,8 +46,8 @@ echo "proteome, number of mcrA genes, number of hsp70 genes" > full_table.txt
 for file in proteomes/proteome_*.fasta
 do
 proteome=$(echo $file)
-mcrA=$(cat $file*_mcrA.out | grep -v "#" | uniq | wc -l)
-hsp70=$(cat $file*_hsp.out | grep -v "#" | uniq | wc -l)
+mcrA=$(cat $file*-mcrA.out | grep -v "#" | uniq | wc -l)
+hsp70=$(cat $file*-hsp.out | grep -v "#" | uniq | wc -l)
 echo "$proteome, $mcrA, $hsp70" | sed 's/proteomes\///g' >> full_table.txt
 done
 
