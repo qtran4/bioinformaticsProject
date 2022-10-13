@@ -1,0 +1,20 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+WP_053549228.1       -          hsp70master          -             2e-283  938.9  23.7    1e-249  827.6  18.2   2.0   1   1   1   2   2   2   2 molecular chaperone DnaK 
+WP_053550046.1       -          hsp70master          -            2.2e-12   43.7   5.5   9.4e-12   41.6   5.5   1.9   1   1   0   1   1   1   1 rod shape-determining protein 
+WP_053550968.1       -          hsp70master          -            0.00075   15.5   0.2    0.0085   12.0   0.1   2.2   1   1   1   2   2   2   1 pilus assembly protein PilM 
+WP_053549249.1       -          hsp70master          -             0.0024   13.8   0.2     0.096    8.5   0.0   2.0   2   0   0   2   2   2   2 ketoacyl-ACP synthase III 
+WP_053551643.1       -          hsp70master          -             0.0031   13.5   0.8    0.0031   13.5   0.8   2.6   3   1   0   3   3   3   1 cell division protein FtsA 
+WP_053550303.1       -          hsp70master          -             0.0078   12.1   0.1     0.012   11.5   0.1   1.2   1   0   0   1   1   1   1 4-hydroxy-3-methylbut-2-enyl diphosphate reductase 
+WP_082351077.1       -          hsp70master          -              0.019   10.9   0.5     0.055    9.3   0.1   1.7   2   0   0   2   2   2   0 hypothetical protein 
+#
+# Program:         hmmsearch
+# Version:         3.3.2 (Nov 2020)
+# Pipeline mode:   SEARCH
+# Query file:      ref_sequences/hsp70master.build
+# Target file:     proteomes/proteome_31.fasta
+# Option settings: /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/tools/hmmsearch --tblout proteomes/proteome31.hsp70search ref_sequences/hsp70master.build proteomes/proteome_31.fasta 
+# Current dir:     /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/bioinformaticsProject
+# Date:            Wed Oct 12 21:06:57 2022
+# [ok]

@@ -1,0 +1,14 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+WP_012037073.1       -          hsp70master          -                  0 1047.9  25.7         0 1047.7  25.7   1.0   1   0   0   1   1   1   1 molecular chaperone DnaK 
+#
+# Program:         hmmsearch
+# Version:         3.3.2 (Nov 2020)
+# Pipeline mode:   SEARCH
+# Query file:      ref_sequences/hsp70master.build
+# Target file:     proteomes/proteome_16.fasta
+# Option settings: /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/tools/hmmsearch --tblout proteomes/proteome16.hsp70search ref_sequences/hsp70master.build proteomes/proteome_16.fasta 
+# Current dir:     /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/bioinformaticsProject
+# Date:            Wed Oct 12 21:06:56 2022
+# [ok]

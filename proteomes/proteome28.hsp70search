@@ -1,0 +1,14 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+WP_012966771.1       -          hsp70master          -                7.9    1.7  18.3       8.3    1.7  18.3   1.0   1   0   0   1   1   1   0 ATP synthase archaeal subunit H 
+#
+# Program:         hmmsearch
+# Version:         3.3.2 (Nov 2020)
+# Pipeline mode:   SEARCH
+# Query file:      ref_sequences/hsp70master.build
+# Target file:     proteomes/proteome_28.fasta
+# Option settings: /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/tools/hmmsearch --tblout proteomes/proteome28.hsp70search ref_sequences/hsp70master.build proteomes/proteome_28.fasta 
+# Current dir:     /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/bioinformaticsProject
+# Date:            Wed Oct 12 21:06:56 2022
+# [ok]

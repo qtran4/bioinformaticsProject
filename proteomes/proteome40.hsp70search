@@ -1,0 +1,14 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+WP_010867429.1       -          hsp70master          -             0.0068   11.4   6.5    0.0083   11.1   6.5   1.1   1   0   0   1   1   1   1 transcriptional regulator 
+#
+# Program:         hmmsearch
+# Version:         3.3.2 (Nov 2020)
+# Pipeline mode:   SEARCH
+# Query file:      ref_sequences/hsp70master.build
+# Target file:     proteomes/proteome_40.fasta
+# Option settings: /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/tools/hmmsearch --tblout proteomes/proteome40.hsp70search ref_sequences/hsp70master.build proteomes/proteome_40.fasta 
+# Current dir:     /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/bioinformaticsProject
+# Date:            Wed Oct 12 21:06:57 2022
+# [ok]

@@ -1,0 +1,21 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+WP_010075966.1       -          hsp70master          -                  0 1011.6  32.7         0 1011.5  32.7   1.0   1   0   0   1   1   1   1 molecular chaperone DnaK 
+WP_010073455.1       -          hsp70master          -           1.2e-136  454.4   4.3  1.4e-136  454.2   4.3   1.0   1   0   0   1   1   1   1 molecular chaperone HscC 
+WP_010076109.1       -          hsp70master          -           6.2e-111  369.5   6.9  1.4e-103  345.2   0.6   2.2   2   0   0   2   2   2   2 Hsp70 family protein 
+WP_010076108.1       -          hsp70master          -            1.3e-87  292.4   5.4   1.6e-87  292.1   5.4   1.1   1   0   0   1   1   1   1 Hsp70 family protein 
+WP_010075827.1       -          hsp70master          -            2.3e-15   53.8   9.7   1.5e-14   51.1   9.7   2.3   1   1   0   1   1   1   1 rod shape-determining protein 
+WP_010076656.1       -          hsp70master          -            1.5e-14   51.1   6.9   1.3e-13   48.0   6.9   2.2   1   1   0   1   1   1   1 rod shape-determining protein 
+WP_010074858.1       -          hsp70master          -            0.00049   16.4   0.0    0.0035   13.6   0.0   2.0   2   0   0   2   2   2   1 xylulokinase 
+WP_010077048.1       -          hsp70master          -              0.014   11.6   2.4     0.014   11.5   0.4   1.7   1   1   1   2   2   2   0 DUF89 domain-containing protein 
+#
+# Program:         hmmsearch
+# Version:         3.3.2 (Nov 2020)
+# Pipeline mode:   SEARCH
+# Query file:      ref_sequences/hsp70master.build
+# Target file:     proteomes/proteome_18.fasta
+# Option settings: /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/tools/hmmsearch --tblout proteomes/proteome18.hsp70search ref_sequences/hsp70master.build proteomes/proteome_18.fasta 
+# Current dir:     /afs/crc.nd.edu/user/t/treisch/Private/biocomputing2022/bioinformaticsProject
+# Date:            Wed Oct 12 21:06:56 2022
+# [ok]
