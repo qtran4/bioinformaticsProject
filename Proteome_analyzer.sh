@@ -30,9 +30,17 @@ grep -w -E "\s\-\s|Target file\: " $mcrA_entry | grep -o "proteome_[0-9][0-9]" >
 grep -w -E "\s\-\s" $mcrA_entry | wc -l >> mcrA.txt 
 done
 
+cat mcrA.txt | sed -E 's/[1-9]+/Y/g' | tr '0' 'N' > mcrA_char.txt
+
 for hsp70_entry in hsp70_seqmatch*
 do
 grep -w -E "\s\-\s" $hsp70_entry | wc -l >> hsp70.txt 
 done
 
-paste proteome.txt mcrA.txt hsp70.txt -d "," 
+echo -e "Proteome #,Presence of mcrA (Y or N),# of hsp70 genes" > column_headers.txt
+paste proteome.txt mcrA_char.txt hsp70.txt -d "," > final_table.txt 
+cat final_table.txt >> column_headers.txt
+
+cat column_headers.txt
+
+
