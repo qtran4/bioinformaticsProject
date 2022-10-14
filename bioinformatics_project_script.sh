@@ -11,7 +11,7 @@ cat ./ref_sequences/mcr* > all_mcr.fasta
 ~/Private/Biocomputing2022/tools/hmmbuild mcr_hmmbuild_results mcr_muscle_output
 
 echo "Proteome Number,Number of MCR Genes,Number of HSP Genes" > countfile_proteomes.csv; \
-echo "Proteome Number,Number of MCR Genes,Number of HSP Genes" > recommendation_list.csv; \
+echo "Proteome Number" > recommendation_list.txt
 
 for file in ./proteomes/*.fasta
 do
@@ -24,7 +24,7 @@ echo "$name,$mcr_count,$hsp_count" >> countfile_proteomes.csv
 
 done
 
-cat countfile_proteomes.csv |sed 1d | sort -t"," -k2rn,2 -k3rn,3 | grep -v ',0' >> recommendation_list.csv
+cat countfile_proteomes.csv |sed 1d | sort -t"," -k2rn,2 -k3rn,3 | grep -v ',0' | cut -d ',' -f1 >> recommendation_list.txt
 
 rm temp_output_hsp
 rm temp_output_mcr
