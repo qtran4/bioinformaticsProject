@@ -3,7 +3,9 @@
 # sequences of the given gene. The script then creates a summary table collating the results
 # of all searches, and finally generates a text file containing its recommendations for
 # pH-resistant methanogen candidate proteomes
-# Usage: bash Proteome_analyzer.sh refsequences_directory proteome_sequences_directory
+# Usage: bash GONZALEZ_SALLAY_MARTIN_Proteome_analyzer.sh refsequences_directory proteome_sequences_directory
+
+# Writers: Hunter Gonzalez, Lauren Sallay, Peter Martin
 
 cat $1/mcrAgene_*.fasta | ~/Private/Biocomputing2022/tools/muscle -out mcrA_align.fasta
 ~/Private/Biocomputing2022/tools/hmmbuild mcrA_HMM mcrA_align.fasta
