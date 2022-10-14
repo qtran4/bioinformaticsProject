@@ -18,7 +18,7 @@ cat ./ref_sequences/mcrAgene*.fasta >> ./ref_sequences/mcrA_master.fasta
 
 #Use hmm search to search each proteome for matches to mcrA
 #the output files for hmm search are created in the proteomes directory
-for file in proteomes/*
+for file in proteomes/*.fasta
 do
 ../tools/hmmsearch --tblout $file-mcrA.out hmmbuild_results_mcrA.hmm $file
 done
@@ -35,7 +35,7 @@ cat ./ref_sequences/hsp70gene*.fasta >> ./ref_sequences/hsp70_master.fasta
 
 #Use hmm search to search each proteome for matches to hsp70
 #this creates result files in the proteomes directory
-for file in proteomes/*
+for file in proteomes/*.fasta
 do
 ../tools/hmmsearch --tblout $file-hsp.out hmmbuild_results_hsp.hmm $file
 done
@@ -55,3 +55,14 @@ done
 #Then, the output is sorted by the number of hsp70 genes present.
 #The top 8 proteome candidates based on the presence of mcrA and a high number of hsp70 genes present are listed in a file created called recommended_proteomes.txt. This accomplished goal #2
 cat full_table.txt | tail -n 50 | grep -v "0," | sort -t , -k 3,3n | tail -n 8 > recommended_proteomes.txt
+
+#contents of recommended_proteomes.txt:
+#proteome number, number of mcrA genes, number of hsp70 genes
+#proteome_05.fasta, 1, 2
+#proteome_07.fasta, 1, 2
+#proteome_23.fasta, 2, 2
+#proteome_24.fasta, 1, 2
+#proteome_03.fasta, 1, 3
+#proteome_42.fasta, 1, 3
+#proteome_45.fasta, 1, 3
+#proteome_50.fasta, 1, 3
