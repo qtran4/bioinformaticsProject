@@ -31,7 +31,7 @@ echo $a, $b, $c >> summary.csv
 done 
 
 #Removes heading of summary file as well as proteomes with no matches 
-#Sorts by number of hsp70 matches (highest to lowest), gets top three matches and saves proteome names to candidate file
-cat summary.csv | sed '1d' | sed -e '/, 0/d'| sort -k2,2nr | head -n 3 | cut -d, -f 1 > candidates.txt
+#Sorts by number of hsp70 matches (highest to lowest), gets top four matches (each with 3 hsp70) and saves proteome names to candidate file
+cat summary.csv | sed '1d' | sed -e '/, 0/d'| sort -k2,2nr | head -n 4 | cut -d, -f 1 > candidates.txt
 
 
