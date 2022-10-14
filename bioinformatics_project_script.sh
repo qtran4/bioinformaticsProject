@@ -24,7 +24,7 @@ echo "$name,$mcr_count,$hsp_count" >> countfile_proteomes.csv
 
 done
 
-cat countfile_proteomes.csv | sort -t"," -k2rn,2 -k3rn,3 | grep -v ',0' >> recommendation_list.csv
+cat countfile_proteomes.csv |sed 1d | sort -t"," -k2rn,2 -k3rn,3 | grep -v ',0' >> recommendation_list.csv
 
 rm temp_output_hsp
 rm temp_output_mcr
