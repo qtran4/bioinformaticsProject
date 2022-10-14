@@ -28,16 +28,16 @@ ls proteomes | sed 's/.fasta//g' > file_list
 mkdir $1_results
 mkdir $2_results
 
-# Now let's count gene 1
+# Now let's count gene 1; there is an e-value filter placed on this search (and the next) to minimize the amount gene assignments through random chance. The E-value of 0.1 is used per the suggestions of this research forum post <https://www.researchgate.net/post/What-e-value-do-you-use-as-a-cutoff-and-for-what-purpose-when-you-are-computing-a-BLAST>.
 for i in `cat file_list`
 do
-../tools/hmmsearch -E "5"  --tblout $1_results/$i ref_sequences/$1_profile proteomes/$i.fasta
+../tools/hmmsearch -E "0.1"  --tblout $1_results/$i ref_sequences/$1_profile proteomes/$i.fasta
 done
 
-# And gene 2
+# And gene 2; the same E-value filter as before.
 for i in `cat file_list`
 do
-../tools/hmmsearch -E "5" --tblout $2_results/$i ref_sequences/$2_profile proteomes/$i.fasta
+../tools/hmmsearch -E "0.1" --tblout $2_results/$i ref_sequences/$2_profile proteomes/$i.fasta
 done
 
 # Now to present the data. First we need to count the search results

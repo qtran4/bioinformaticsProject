@@ -13,7 +13,7 @@ WP_011958489.1       -          hsp70_aligned        -            0.00095   15.6
 # Pipeline mode:   SEARCH
 # Query file:      ref_sequences/hsp70_profile
 # Target file:     proteomes/proteome_12.fasta
-# Option settings: ../tools/hmmsearch --tblout hsp70_results/proteome_12 -E 5 ref_sequences/hsp70_profile proteomes/proteome_12.fasta 
+# Option settings: ../tools/hmmsearch --tblout hsp70_results/proteome_12 -E 0.1 ref_sequences/hsp70_profile proteomes/proteome_12.fasta 
 # Current dir:     /afs/crc.nd.edu/user/m/mandrea1/Private/Intro_Biocomputing_BIOS_60318/bash_project
-# Date:            Thu Oct 13 17:34:22 2022
+# Date:            Thu Oct 13 21:29:10 2022
 # [ok]

@@ -8,7 +8,7 @@ WP_011972678.1       -          mcrA_aligned         -                  0 1026.9
 # Pipeline mode:   SEARCH
 # Query file:      ref_sequences/mcrA_profile
 # Target file:     proteomes/proteome_15.fasta
-# Option settings: ../tools/hmmsearch --tblout mcrA_results/proteome_15 -E 5 ref_sequences/mcrA_profile proteomes/proteome_15.fasta 
+# Option settings: ../tools/hmmsearch --tblout mcrA_results/proteome_15 -E 0.1 ref_sequences/mcrA_profile proteomes/proteome_15.fasta 
 # Current dir:     /afs/crc.nd.edu/user/m/mandrea1/Private/Intro_Biocomputing_BIOS_60318/bash_project
-# Date:            Thu Oct 13 17:34:20 2022
+# Date:            Thu Oct 13 21:29:08 2022
 # [ok]

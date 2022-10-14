@@ -15,12 +15,12 @@ proteome_13  0  3
 proteome_14  0  1
 proteome_15  1  1
 proteome_16  1  1
-proteome_17  0  4
+proteome_17  0  1
 proteome_18  0  8
 proteome_19  2  1
 proteome_20  0  3
-proteome_21  0  5
-proteome_22  0  9
+proteome_21  0  4
+proteome_22  0  8
 proteome_23  2  2
 proteome_24  1  2
 proteome_25  0  5
