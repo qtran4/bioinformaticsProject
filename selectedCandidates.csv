@@ -1,0 +1,17 @@
+Recommended Proteomes (ordered by number of HSP70 genes and contain at least one mcrA gene)
+name,hsp70 count,mcrA count
+proteome_03,3,1
+proteome_42,3,1
+proteome_45,3,1
+proteome_50,3,1
+proteome_05,2,1
+proteome_07,2,1
+proteome_23,2,2
+proteome_24,2,1
+proteome_15,1,1
+proteome_16,1,1
+proteome_19,1,2
+proteome_38,1,1
+proteome_39,1,1
+proteome_44,1,1
+proteome_48,1,1
