@@ -3,7 +3,7 @@
 # sequences of the given gene. The script then creates a summary table collating the results
 # of all searches, and finally generates a text file containing its recommendations for
 # pH-resistant methanogen candidate proteomes
-# Usage: bash Proteome_analyzer.sh mcrA_gene_refsequences_directory hsp70_gene_refsequences_directory proteome_sequences_directory
+# Usage: bash Proteome_analyzer.sh refsequences_directory proteome_sequences_directory
 
 cat $1/mcrAgene_*.fasta | ~/Private/Biocomputing2022/tools/muscle -out mcrA_align.fasta
 ~/Private/Biocomputing2022/tools/hmmbuild mcrA_HMM mcrA_align.fasta
@@ -49,6 +49,12 @@ echo ' '
 # Creates a text file with the names of the candidate pH-resistant methanogens, which includes only the proteomes
 # that have at least 1 mcrA gene and at least 1 hsp70 gene. This subset is then sorted by the number of hsp70 gene copies present in the genome,
 # with the candidate methanogens that have the highest number of hsp70 gene copies displayed at the top.
-echo "This is a list of proteomes ranked according to their potential as pH-resistant methanogens. This list is displayed as proteomeID,# of hsp70 gene copies" > recommend_table.txt
+echo "This is a list of proteomes ranked according to their potential as pH-resistant methanogens. This list is displayed as proteomeID,#_of_hsp70_gene_copies" > recommend_table.txt
 tail -n +2 column_headers.txt | grep -w "Y" | grep -E -w "[1-9]+" | sort -t ',' -k 3nr | cut -d ',' -f 1,3 >> recommend_table.txt
+max_hsp70_count=$(tail -n +2 column_headers.txt | grep -w "Y" | grep -E -w "[1-9]+" | sort -t ',' -k 3nr | cut -d ',' -f 3 | head -n 1)
+echo ' ' >> recommend_table.txt
+echo "This is a list of the proteome(s) that have the highest number of hsp70 gene copies within the list above, and are therefore likely to be the most suitable candidates:" >> recommend_table.txt
+grep -w "$max_hsp70_count" recommend_table.txt | cut -d ',' -f 1 >> recommend_table.txt
+echo "This/these proteome(s) have the following number of hsp70 gene copies:" >> recommend_table.txt
+echo $max_hsp70_count >> recommend_table.txt
 cat recommend_table.txt
