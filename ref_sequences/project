@@ -1,0 +1,38 @@
+# Here, you hahve to assume that the script is in the ref_sequences directory
+# Stuart Question: Should we use absolute path for everything or assume everyone has the same directory set up?
+# Create one file that appends all McrA gene files 
+for A in mcrA*.fasta
+do
+cat $A >> allspecies.fasta
+done
+
+# Using muscle, align to evaluate the level of sequence conservation or homology amongst sequences
+~/Private/Biocomputing2022/tools/muscle -in allspecies.fasta -out allspecies.fasta.aligned
+
+# Build a profile HMM using the allspecies.fasta sequence alignment and hmmbuild
+~/Private/Biocomputing2022/tools/hmmbuild allspecies.fasta.hmmbuild allspecies.fasta.aligned
+
+# Search the proteome for McrA gene using hmmsearch
+for B in ~/Private/Biocomputing2022/bioinformaticsProject/proteomes/proteom*.fasta
+do
+~/Private/Biocomputing2022/tools/hmmsearch --tblout $B.hmmsearch allspecies.fasta.hmmbuild $B
+done
+
+# Create one file that appends all hsp gene files
+for D in ~/Private/Biocomputing2022/bioinformaticsProject/ref_sequences/hsp70gene_*.fasta
+do
+cat $D >> allgenes.fasta
+done
+
+# Using muscle, align to evaluate the level of sequence conservation or homology amongst sequences
+~/Private/Biocomputing2022/tools/muscle -in allgenes.fasta -out allgenes.fasta.aligned
+
+# # Build a profile HMM using the allspecies.fasta sequence alignment and hmmbuild
+~/Private/Biocomputing2022/tools/hmmbuild allgenes.fasta.hmmbuild allgenes.fasta.aligned
+
+# Search the proteome for hsp gene using hmmsearch
+for E in ~/Private/Biocomputing2022/bioinformaticsProject/proteomes/proteom*.fasta
+do
+~/Private/Biocomputing2022/tools/hmmsearch --tblout $E.hmmsearch.hsp allgenes.fasta.hmmbuild $E
+done
+
