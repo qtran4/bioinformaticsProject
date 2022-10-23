@@ -1,0 +1,30 @@
+#Creating the Muscle for hspGenes
+cd ~/Private/bioinformaticsProject/ref_sequences | cat hsp70gene_*.fasta >> hspgenes.txt | ~/Private/Biocomputing2022/tools/muscle -in hspgenes.txt -out hspGenesmuscle.txt
+#HmmBuild for hspGenes
+~/Private/Biocomputing2022/tools/hmmbuild hmmbuild.hsp hspGenesmuscle.txt
+#Copy hmmbuild.hsp  to Proteome Directory
+cp hmmbuild.hsp ../proteomes
+#Move to Proteomes Directory to Run for loop
+~/Private/bioinformaticsProject/proteomes
+#HmmSearch for hspGenes For Loop
+for file in proteome_*.fasta
+do
+	~/Private/Biocomputing2022/tools/hmmsearch --tblout hmm.hspSearch${file} hmmbuild.hsp $file
+done
+
+
+
+#Creating the Muscle for the mcrAgenes
+cd ~/Private/bioinformaticsProject/ref_sequences | cat mcrAgene_*.fasta >> mcrAgene.txt | ~/Private/Biocomputing2022/tools/muscle -in mcrAgene.txt -out mcrAmuscle.txt
+#HmmBuild for mcrAgenes
+~/Private/Biocomputing2022/tools/hmmbuild hmmbuild.mcrA mcrAmuscle.txt
+#Copy hmmbuild.mcrA to Proteomes Directory
+cp hmmbuild.mcrA ../proteomes
+#Move to Proteomes Directory to Run For Loop
+~/Private/bioinformaticsProject/proteomes
+#HmmSearch for mcrA gene For Loop
+for file in proteome_*.fasta
+do
+	~/Private/Biocomputing2022/tools/hmmsearch --tblout hmmSearch.mcrA${file} hmmbuild.mcrA $file
+done
+
