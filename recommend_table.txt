@@ -1,0 +1,24 @@
+This is a list of proteomes ranked according to their potential as pH-resistant methanogens. This list is displayed as proteomeID,#_of_hsp70_gene_copies
+proteome_03,3
+proteome_42,3
+proteome_45,3
+proteome_50,3
+proteome_05,2
+proteome_07,2
+proteome_23,2
+proteome_24,2
+proteome_15,1
+proteome_16,1
+proteome_19,1
+proteome_38,1
+proteome_39,1
+proteome_44,1
+proteome_48,1
+ 
+This is a list of the proteome(s) that have the highest number of hsp70 gene copies within the list above, and are therefore likely to be the most suitable candidates:
+proteome_03
+proteome_42
+proteome_45
+proteome_50
+This/these proteome(s) have the following number of hsp70 gene copies:
+3
